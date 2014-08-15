@@ -1,0 +1,86 @@
+/*-------------------------------------*\
+    MAIN
+\*-------------------------------------*/
+
+/**
+ * Main.scss
+ * 
+ * This is the root style file, where everything
+ * else stems from.
+ *
+ **
+ * Contents         - You are here
+ * 
+ * Imports          - All the file imports
+ *  - utilities
+ *  - quarks
+ *  - atoms
+ *  - molecules
+ *  - pages
+ *  - shame
+ * 
+ * 
+ */ 
+ 
+
+/*-------------------------------------*\
+    Imports
+\*-------------------------------------*/
+
+
+
+
+@import 'compass';
+@import 'normalize';
+// @import 'csswizardry-grids';
+// @import 'breakpoint';
+
+/*---   Quarks   ---*/
+
+@import 'quarks/breakpoints';
+@import 'quarks/colors';
+@import 'quarks/fonts';
+@import 'quarks/gradients';
+@import 'quarks/borders';
+@import 'quarks/icons';
+@import 'quarks/animations';
+
+
+
+/*---   Utilities   ---*/
+
+@import 'utilities/global';
+@import 'utilities/alignment';
+@import 'utilities/nudge';
+@import 'utilities/pad';
+
+
+
+/*---   Atoms   ---*/
+
+@import 'atoms/type';
+@import 'atoms/buttons';
+@import 'atoms/headings';
+@import 'atoms/images';
+@import 'atoms/links';
+@import 'atoms/lists';
+@import 'atoms/selections';
+@import 'atoms/slabs';
+
+
+
+/*---   Molecules   ---*/
+
+
+
+/*---   Organisms   ---*/
+
+
+
+/*---   Pages   ---*/
+
+
+
+/*---   Shame   ---*/
+
+@import 'shame';
