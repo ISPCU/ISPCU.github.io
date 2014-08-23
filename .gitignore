@@ -118,3 +118,7 @@ nbproject
 .node_history
 .sass-cache
 .vagrant
+bootstrap.sh
+Cheffile.lock
+cookbooks
+tmp
