@@ -72,7 +72,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "git"
     chef.add_recipe "nginx"
     chef.add_recipe "redis"
-    chef.add_recipe "ruby"
+    chef.add_recipe "rvm::user"
+    chef.add_recipe "rvm::vagrant"
 
     # chef.roles_path = "../my-recipes/roles"
     # chef.data_bags_path = "../my-recipes/data_bags"
@@ -105,11 +106,25 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :daemonize          => "yes",
         :timeout            => "300",
         :loglevel           => "notice",
+      },
+      :rvm    => {
+        :user_installs    => [
+          {
+            :user => "vagrant",
+            :default_ruby => "2.1",
+            :rubies => ["2.1"],
+            :global_gems => [
+              { :name => 'compass' },
+              { :name => 'breakpoint' },
+            ]
+          }
+        ]
       }
+
     }
 
   end
   
-  # config.vm.provision "shell", path => "bootstrap.sh"
+  config.vm.provision "shell", path: "bootstrap.sh"
 
 end

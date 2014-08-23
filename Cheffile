@@ -9,4 +9,4 @@ cookbook "nodejs", {:github=>"mdxp/nodejs-cookbook"}
 cookbook "git", {}
 cookbook "nginx", {}
 cookbook "redis", {:github=>"ctrabold/chef-redis"}
-cookbook "ruby", {}
+cookbook "rvm", {}
