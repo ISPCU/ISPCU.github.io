@@ -30,7 +30,7 @@ vagrant provision
 
 Once that's all setup, you should have vagrant running and you'll be able to 
 access the server running on your local machine at either `192.168.50.10` or 
-at `www.ispcu.local`.
+at `www.ispcu.local` (www required).
 
 Right off the bat sails won't be running so browsing to those addresses won't
 get you far, to actually start running sails you'll have to ssh into the
