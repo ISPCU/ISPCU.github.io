@@ -21,6 +21,14 @@
 
 module.exports.connections = {
 
+  ispcuMongo: {
+      url: 'mongodb://localhost/ispcu'
+  },
+
+  ispcuMongoDev: {
+      url: 'mongodb://localhost/ispcu_dev'
+  },
+
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
@@ -64,6 +72,7 @@ module.exports.connections = {
     // password: 'password',
     // database: 'your_mongo_db_name_here'
   },
+
 
   /***************************************************************************
   *                                                                          *

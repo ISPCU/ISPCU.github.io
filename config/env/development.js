@@ -20,7 +20,7 @@ module.exports = {
   port: 8080,
 
   // models: {
-  //   connection: 'someMongodbServer'
+  //   connection: 'ispcuMongoDev'
   // }
 
 };
