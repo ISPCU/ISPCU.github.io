@@ -26,9 +26,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.50.10"
 
-  # config.hostmanager.enabled = true
-  # config.hostmanager.manage_host = true
-  # config.hostmanager.aliases = [ "www.ispcu.local" ]
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_host = true
+  config.hostmanager.aliases = [ "www.ispcu.local" ]
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -76,7 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "mongodb"
     chef.add_recipe "nodejs"
     chef.add_recipe "git"
-    chef.add_recipe "nginx"
+    # chef.add_recipe "nginx"
     chef.add_recipe "redis"
     chef.add_recipe "rvm::system"
     chef.add_recipe "rvm::vagrant"
@@ -96,15 +96,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :git     => {
         :prefix => "/usr/local",
       },
-      :nginx   => {
-        :dir                => "/etc/nginx",
-        :log_dir            => "/var/log/nginx",
-        :binary             => "/usr/sbin/nginx",
-        :user               => "www-data",
-        :init_style         => "runit",
-        :pid                => "/var/run/nginx.pid",
-        :worker_connections => "1024",
-      },
+      # :nginx   => {
+      #   :user               => "www-data",
+      #   :init_style         => "runit",
+      #   :pid                => "/var/run/nginx.pid",
+      #   :worker_connections => "1024",
+      # },
       :redis   => {
         :bind               => "127.0.0.1",
         :port               => "6379",
@@ -136,6 +133,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
   end
+
+  # config.vm.provision "shell",
+  #   inline: "echo -e $1 > /etc/nginx/conf.d/nginx.conf",
+  #   args: [<<-EOS
+  #     server {
+  #         listen *:80;
+
+  #         location ~ ^/ {
+  #             proxy_pass http://localhost:8080;
+  #         }
+  #     }
+  #   EOS
+  #   ]
   
   config.vm.provision "shell", path: "bootstrap.sh"
 
