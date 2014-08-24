@@ -1,8 +1,3 @@
-# Ispcu
-
-a [Sails](http://sailsjs.org) application
-
-
 ## Getting Started
 
 All of the developmental dependencies are setup to be installed and built 

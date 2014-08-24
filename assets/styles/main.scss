@@ -29,58 +29,59 @@
 
 
 
+//This line isn't needed when using Grunt (which is what sails does)
+//@import 'compass';
+//
+//Core variables and mixins
+@import 'scss/variables';
+@import 'scss/mixins';
 
-@import 'compass';
-@import 'normalize';
-// @import 'csswizardry-grids';
-// @import 'breakpoint';
+// Reset and dependencies
+@import 'scss/normalize';
+@import 'scss/print';
+@import 'scss/glyphicons';
 
-/*---   Quarks   ---*/
+// Core CSS
+@import 'scss/scaffolding';
+@import 'scss/type';
+@import 'scss/code';
+@import 'scss/grid';
+@import 'scss/tables';
+@import 'scss/forms';
+@import 'scss/buttons';
 
-@import 'quarks/breakpoints';
-@import 'quarks/colors';
-@import 'quarks/fonts';
-@import 'quarks/gradients';
-@import 'quarks/borders';
-@import 'quarks/icons';
-@import 'quarks/animations';
+// Components
+@import 'scss/component-animations';
+@import 'scss/dropdowns';
+@import 'scss/button-groups';
+@import 'scss/input-groups';
+@import 'scss/navs';
+@import 'scss/navbar';
+@import 'scss/breadcrumbs';
+@import 'scss/pagination';
+@import 'scss/pager';
+@import 'scss/labels';
+@import 'scss/badges';
+@import 'scss/jumbotron';
+@import 'scss/thumbnails';
+@import 'scss/alerts';
+@import 'scss/progress-bars';
+@import 'scss/media';
+@import 'scss/list-group';
+@import 'scss/panels';
+@import 'scss/responsive-embed';
+@import 'scss/wells';
+@import 'scss/close';
 
+// Components w/ JavaScript
+@import 'scss/modals';
+@import 'scss/tooltip';
+@import 'scss/popovers';
+@import 'scss/carousel';
 
+// Utility classes
+@import 'scss/utilities';
+@import 'scss/responsive-utilities';
 
-/*---   Utilities   ---*/
-
-@import 'utilities/global';
-@import 'utilities/alignment';
-@import 'utilities/nudge';
-@import 'utilities/pad';
-
-
-
-/*---   Atoms   ---*/
-
-@import 'atoms/type';
-@import 'atoms/buttons';
-@import 'atoms/headings';
-@import 'atoms/images';
-@import 'atoms/links';
-@import 'atoms/lists';
-@import 'atoms/selections';
-@import 'atoms/slabs';
-
-
-
-/*---   Molecules   ---*/
-
-
-
-/*---   Organisms   ---*/
-
-
-
-/*---   Pages   ---*/
-
-
-
-/*---   Shame   ---*/
-
-@import 'shame';
+// General Style (this needs to be merged into the actual Bootstrap changes)
+@import 'ispcu';
