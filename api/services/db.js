@@ -3,7 +3,8 @@
 /**
  * We load mongoose
  */
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+    fs = require('fs');
  
 if (sails.config.environment === 'produciton')
     mongoose.connect(sails.config.connection.ispcuMongo.url)
@@ -24,12 +25,25 @@ db.once('open', function callback() {
     console.log('Connected to MongoDB !');
           
 });
- 
+
 /**
- * Let's make our Mongodb Schemas/Models
+ * Run through models and load Schemas
  */
-module.exports = {
+var models_path = '../models';
+(function loadModels(path) {
+    fs.readdirSync(models_path).forEach(function(file) {
 
-    // MyModel: require('../models/MyModel.js')(mongoose)
+        var newPath = models_path + '/' + file,
+            stat = fs.statSync(newPath);
 
-}
+        // Require model files
+        if (stat.isFile() && /.*\.(js|coffee)$/.test(file)) {
+            require(newPath);
+        } else if (stat.isDirectory()) {
+            loadModels(newPath);
+        }
+    });
+        
+})(models_path);
+ 
+module.exports = mongoose;
