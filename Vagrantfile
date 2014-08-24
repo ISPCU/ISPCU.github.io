@@ -26,9 +26,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.50.10"
 
-  config.hostmanager.enabled = true
-  config.hostmanager.manage_host = true
-  config.hostmanager.aliases = [ "www.ispcu.local" ]
+  # config.hostmanager.enabled = true
+  # config.hostmanager.manage_host = true
+  # config.hostmanager.aliases = [ "www.ispcu.local" ]
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -62,9 +62,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   
+  # config.vm.provision :shell, :inline => 'apt-get update'
+  # config.vm.provision :shell, :inline => 'apt-get install build-essential ruby1.9.1 --no-upgrade --yes'
+  
   config.vm.provision "chef_solo" do |chef|
+    chef.log_level = :debug
     chef.cookbooks_path = "cookbooks"
+
     chef.add_recipe :apt
+    chef.add_recipe "build-essential"
     chef.add_recipe "vim"
     chef.add_recipe "mongodb::10gen_repo"
     chef.add_recipe "mongodb"
@@ -72,7 +78,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "git"
     chef.add_recipe "nginx"
     chef.add_recipe "redis"
-    chef.add_recipe "rvm::user"
+    chef.add_recipe "rvm::system"
     chef.add_recipe "rvm::vagrant"
 
     # chef.roles_path = "../my-recipes/roles"
@@ -108,11 +114,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         :loglevel           => "notice",
       },
       :rvm    => {
+        :rubies => ["2.1.2"],
+        :default_ruby => "2.1.2",
+        :global_gems => [
+          { :name => 'compass' },
+          { :name => 'breakpoint' }
+        ],
         :user_installs    => [
           {
             :user => "vagrant",
-            :default_ruby => "2.1",
-            :rubies => ["2.1"],
+            :default_ruby => "2.1.2",
+            :rubies => ["2.1.2"],
             :global_gems => [
               { :name => 'compass' },
               { :name => 'breakpoint' },
