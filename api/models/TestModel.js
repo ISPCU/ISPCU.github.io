@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    schema = mongoose.Schema;
+    Schema = mongoose.Schema;
 
 var TestModelSchema = new Schema({
 
@@ -7,4 +7,4 @@ var TestModelSchema = new Schema({
 
 });
 
-mongoose.model('TestModel', TestModelSchema
+mongoose.model('TestModel', TestModelSchema);

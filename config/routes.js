@@ -34,7 +34,10 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+  '/test': 'TestController.take',
+  '/test/make': 'TestController.make',
 
   /***************************************************************************
   *                                                                          *

@@ -7,9 +7,9 @@ var mongoose = require('mongoose'),
     fs = require('fs');
  
 if (sails.config.environment === 'produciton')
-    mongoose.connect(sails.config.connection.ispcuMongo.url)
+    mongoose.connect(sails.config.connections.ispcuMongo.url)
 else
-    mongoose.connect(sails.config.connection.ispcuMongoDev.url)
+    mongoose.connect(sails.config.connections.ispcuMongoDev.url)
   
 /**
  * We check if the connection is ok
@@ -29,7 +29,7 @@ db.once('open', function callback() {
 /**
  * Run through models and load Schemas
  */
-var models_path = '../models';
+var models_path = __dirname + '/../models';
 (function loadModels(path) {
     fs.readdirSync(models_path).forEach(function(file) {
 
