@@ -39,6 +39,11 @@ module.exports.routes = {
   '/test': 'TestController.take',
   '/test/make': 'TestController.make',
 
+  '/member/take': 'MemberController.take',
+  '/member/make': 'MemberController.make',
+  '/volunteer/take': 'VolunteerController.take',
+  '/volunteer/make': 'VolunteerController.make'
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

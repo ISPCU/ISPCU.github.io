@@ -13,12 +13,12 @@ VolunteerSchema
     .validate(function(value) {
         return value.length > 0;
     }, 'Volunteer name cannot be blank')
-
+VolunteerSchema
     .path('email')
     .validate(function(value) {
         return value.length > 0;
     }, 'Volunteer email cannot be blank')
-
+VolunteerSchema
     .path('skill')
     .validate(function(value) {
         return value.length > 0;

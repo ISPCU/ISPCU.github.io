@@ -5,8 +5,8 @@
  */
 var mongoose = require('mongoose'),
     fs = require('fs');
- 
-if (sails.config.environment === 'produciton')
+
+if (sails.config.environment === 'production')
     mongoose.connect(sails.config.connections.ispcuMongo.url)
 else
     mongoose.connect(sails.config.connections.ispcuMongoDev.url)
