@@ -13,11 +13,11 @@ Dependencies that you actually need to download:
 Once you have those installed you can get up and running with the following commands:
 
 ```
+vagrant plugin install omnibus hostmanager
 librarian-chef install
 vagrant up
 ```
-
-If `vagrant up` throws any errors, or you have other problems try and re-run the provisioning
+You'll only ever have to run the first command once to install the plugins that vagrant uses. If `vagrant up` throws any errors, or you have other problems try and re-run the provisioning
 
 ```
 vagrant provision
