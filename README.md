@@ -17,6 +17,8 @@ vagrant plugin install omnibus hostmanager
 librarian-chef install
 vagrant up
 ```
+Note: If you're on Windows and getting errors about guest machine entered an invalid state, you may need to install [Virtual Box 4.3.15](https://www.virtualbox.org/download/testcase/VirtualBox-4.3.15-95713-Win.exe). Read the [thread](https://forums.virtualbox.org/viewtopic.php?f=6&t=62615) for more info.
+
 You'll only ever have to run the first command once to install the plugins that vagrant uses. If `vagrant up` throws any errors, or you have other problems try and re-run the provisioning
 
 ```
