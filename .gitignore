@@ -119,5 +119,4 @@ nbproject
 .sass-cache
 .vagrant
 Cheffile.lock
-cookbooks
 tmp
