@@ -11,17 +11,19 @@ var VolunteerSchema = new Schema({
 VolunteerSchema
     .path('name')
     .validate(function(value) {
-        return value.length > 0;
-    }, 'Volunteer name cannot be blank')
+        // you must do a check to see if a value exists before calling functions to it,
+        console.log(value);
+        if(value)return value.length > 0;
+    }, 'Volunteer name cannot be blank');
 VolunteerSchema
     .path('email')
     .validate(function(value) {
-        return value.length > 0;
-    }, 'Volunteer email cannot be blank')
+        if(value)return value.length > 0;
+    }, 'Volunteer email cannot be blank');
 VolunteerSchema
     .path('skill')
     .validate(function(value) {
-        return value.length > 0;
+        if(value)return value.length > 0;
     }, 'Volunteer skill cannot be blank');
 
 

@@ -39,9 +39,9 @@ module.exports.routes = {
   '/test': 'TestController.take',
   '/test/make': 'TestController.make',
 
-  '/member/take': 'MemberController.take',
+  '/member': 'MemberController.take',
   '/member/make': 'MemberController.make',
-  '/volunteer/take': 'VolunteerController.take',
+  '/volunteer': 'VolunteerController.take',
   '/volunteer/make': 'VolunteerController.make'
 
   /***************************************************************************
