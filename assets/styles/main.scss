@@ -36,7 +36,6 @@
  *
  * OBJECTS
  * Wrappers.............Wrappers and page constraints.
- * Buttons..............inuitcss’ buttons module.
  * Layout...............inuitcss’ layout tool.
  * Box..................inuitcss’ box object.
  * Media................The media object.
@@ -130,13 +129,6 @@
  * #OBJECTS
  */
 @import "quarks/objects.wrappers";
-
-$inuit-btn-background:      $color-btn;
-$inuit-btn-radius:          $base-round;
-$inuit-btn-border-width:    2px;
-$inuit-enable-btn--small:   true;
-$inuit-enable-btn--full:    true;
-//@import "bower_components/inuit-buttons/objects.buttons";
 
 $inuit-enable-layout--middle:   true;
 $inuit-enable-layout--center:   true;
