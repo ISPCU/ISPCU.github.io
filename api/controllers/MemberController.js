@@ -2,7 +2,7 @@ var db = require('../services/db.js'),
     Member = db.model('Member');
 
 module.exports = {
-    make: function (req, res) {
+    post: function (req, res) {
         Member.create({}, function(err, tm) {
             if (err) res.send(500, err);
 
@@ -14,7 +14,7 @@ module.exports = {
         });
     },
 
-    take: function (req, res) {
+    get: function (req, res) {
         Member.find()
             .exec(function(err, tms) {
                 if (err) res.send(500, err);

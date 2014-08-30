@@ -36,13 +36,10 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  '/test': 'TestController.take',
-  '/test/make': 'TestController.make',
-
-  '/member': 'MemberController.take',
-  '/member/make': 'MemberController.make',
-  '/volunteer': 'VolunteerController.take',
-  '/volunteer/make': 'VolunteerController.make'
+  'get /member': 'MemberController.get',
+  'post /member': 'MemberController.post',
+  'get /volunteer': 'VolunteerController.get',
+  'post /volunteer': 'VolunteerController.post'
 
   /***************************************************************************
   *                                                                          *
