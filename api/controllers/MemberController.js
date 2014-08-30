@@ -3,7 +3,10 @@ var db = require('../services/db.js'),
 
 module.exports = {
     post: function (req, res) {
-        Member.create({}, function(err, tm) {
+        console.log(req.body);//For debugging
+        Member.create({name: req.body.name,       email: req.body.email,             ISP: req.body.ISP,
+                       address: req.body.address, phoneNumber: req.body.phoneNumber, want: req.body.want
+        }, function(err, tm) {
             if (err) res.send(500, err);
 
             res.json(201, {

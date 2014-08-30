@@ -12,7 +12,7 @@ VolunteerSchema
     .path('name')
     .validate(function(value) {
         // you must do a check to see if a value exists before calling functions to it,
-        console.log(value);
+        console.log(value);//For debugging
         if(value)return value.length > 0;
     }, 'Volunteer name cannot be blank');
 VolunteerSchema

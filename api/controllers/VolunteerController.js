@@ -3,7 +3,7 @@ var db = require('../services/db.js'),
 
 module.exports = {
     post: function (req, res) {
-        console.log(req.body);
+        console.log(req.body);//For debugging
         Volunteer.create({name: req.body.name, email: req.body.email, skill: req.body.skill}, function(err, tm) {
             if (err) res.send(500, err);
             console.log(tm);

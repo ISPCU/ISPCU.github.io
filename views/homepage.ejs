@@ -22,8 +22,7 @@
 
     <!-- /.intro-header -->
 
-    <!-- Begin test Form -->
-
+    <!-- Begin volunteer Form -->
 
     <div class="row" ng-controller="VolunteerController">
         <div class="col-lg-8 col-lg-offset-2">
@@ -36,7 +35,29 @@
         </div>
     </div>
 
-    <!-- End Test Form -->
+    <!-- End volunteer Form -->
+
+    <!-- Begin member Form -->
+
+    <div class="row" ng-controller="MemberController">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form >
+                <input type="text" ng-model="member.name" placeholder="Name">
+                <input type="text" ng-model="member.email" placeholder="Email">
+                <input type="text" ng-model="member.ISP" placeholder="ISP">
+            </form>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <form >
+                <input type="text" ng-model="member.address" placeholder="Address">
+                <input type="text" ng-model="member.phoneNumber" placeholder="Phone Number">
+                <input type="text" ng-model="member.want" placeholder="Want">
+                <button ng-click="memberFunc(member)">Member!</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- End member Form -->
 
     <!-- Page Content -->
 
