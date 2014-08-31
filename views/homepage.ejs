@@ -44,43 +44,6 @@
     </div>
 </div>
 
-<!-- Begin volunteer Form -->
-
-<div class="row" ng-controller="VolunteerController">
-    <div class="col-lg-8 col-lg-offset-2">
-        <form >
-            <input type="text" ng-model="volunteer.name" placeholder="name">
-            <input type="text" ng-model="volunteer.email" placeholder="email">
-            <input type="text" ng-model="volunteer.skill" placeholder="skill">
-            <button ng-click="volunteerFunc(volunteer)">Volunteer!</button>
-        </form>
-    </div>
-</div>
-
-<!-- End volunteer Form -->
-
-<!-- Begin member Form -->
-
-<div class="row" ng-controller="MemberController">
-    <div class="col-lg-8 col-lg-offset-2">
-        <form >
-            <input type="text" ng-model="member.name" placeholder="Name">
-            <input type="text" ng-model="member.email" placeholder="Email">
-            <input type="text" ng-model="member.ISP" placeholder="ISP">
-        </form>
-    </div>
-    <div class="col-lg-8 col-lg-offset-2">
-        <form >
-            <input type="text" ng-model="member.address" placeholder="Address">
-            <input type="text" ng-model="member.phoneNumber" placeholder="Phone Number">
-            <input type="text" ng-model="member.want" placeholder="Want">
-            <button ng-click="memberFunc(member)">Member!</button>
-        </form>
-    </div>
-</div>
-
-<!-- End member Form -->
-
 <div class="page-micro--large band--white">
     <div class="wrapper">
         <div class="layout">
@@ -103,9 +66,11 @@
                 <div class="layout">
                     <form>
                         <div class="layout__item palm-one-whole lap-and-up-four-fifths">
-							<input type="email" name="email" placeholder="fed-up-customer@example.com">
-                        </div><div class="layout__item palm-one-whole lap-and-up-one-fifth">
+							<input type="email" name="email" placeholder="email@example.com">
+                        </div>
+                        <div class="layout__item palm-one-whole lap-and-up-one-fifth">
                             <a href="#" class="btn btn--expand btn--secondary" style="height: 2.3125rem;line-height: 2.3125rem;padding: 0px;margin: 0px;">Submit</a>
+                        </div>
                     </form>
                     </div>
                 </div>

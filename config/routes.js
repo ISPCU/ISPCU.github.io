@@ -50,9 +50,9 @@ module.exports.routes = {
      * Routes for the backend db methods
      * */
 
-    'get /member': 'MemberController.get',
+    //'get /member': 'MemberController.get', //Going to hide until authenticating is figured out --*probably some admin panel we make
     'post /member': 'MemberController.post',
-    'get /volunteer': 'VolunteerController.get',
+    //'get /volunteer': 'VolunteerController.get', //Probably won't need this yet
     'post /volunteer': 'VolunteerController.post',
 
     /*
@@ -65,7 +65,7 @@ module.exports.routes = {
     '/organization': {
       view: 'organizationpage'
     },
-    '/volunteer': {
+    '/volunteers': {
        view: 'volunteerpage'
     },
     '/members': {

@@ -19,3 +19,30 @@
         </div>
     </div>
 </div>
+
+<!-- Begin member Form -->
+
+<div class="page-micro--small band--blue">
+    <div class="wrapper">
+        <div class="layout">
+            <div class="layout__item palm-one-whole lap-and-up-one-whole">
+                <h2 class="text-color--white" style="margin-bottom: 0px;font-weight: 500;">Want to keep you updated?</h2>
+                <h4 class="heading-sub text-color--white" style="font-size: 16px;letter-spacing: 1px;font-weight:300;">Enter your email and we'll shoot you a message whenever we have news. No spam, and we won't share it with anyone.</h4>
+                <div class="layout" ng-controller="MemberController">
+                    <form >
+                        <input type="text" ng-model="member.name" placeholder="Name">
+                        <input type="text" ng-model="member.email" placeholder="Email">
+                        <input type="text" ng-model="member.ISP" placeholder="ISP">
+                        <input type="text" ng-model="member.address" placeholder="Address">
+                        <input type="text" ng-model="member.phoneNumber" placeholder="Phone Number">
+                        <input type="text" ng-model="member.want" placeholder="Want">
+                        <button ng-click="memberFunc(member)">Member!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End member Form -->
+

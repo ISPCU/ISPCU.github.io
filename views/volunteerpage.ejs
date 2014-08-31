@@ -19,3 +19,27 @@
         </div>
     </div>
 </div>
+
+
+<!-- Begin volunteer Form -->
+
+<div class="page-micro--small band--blue">
+    <div class="wrapper">
+        <div class="layout">
+            <div class="layout__item palm-one-whole lap-and-up-one-whole">
+                <h2 class="text-color--white" style="margin-bottom: 0px;font-weight: 500;">Want us to keep you updated?</h2>
+                <h4 class="heading-sub text-color--white" style="font-size: 16px;letter-spacing: 1px;font-weight:300;">Enter your email and we'll shoot you a message whenever we have news. No spam, and we won't share it with anyone.</h4>
+                <div class="layout" ng-controller="VolunteerController">
+                    <form >
+                        <input type="text" ng-model="volunteer.name" placeholder="name">
+                        <input type="email" ng-model="volunteer.email" placeholder="email">
+                        <input type="text" ng-model="volunteer.skill" placeholder="skill">
+                        <button ng-click="volunteerFunc(volunteer)">Volunteer!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End volunteer Form -->
