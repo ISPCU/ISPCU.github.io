@@ -38,3 +38,19 @@ vagrant ssh
 cd /vagrant
 sails lift
 ```
+
+
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////For those who didn't use Vagrant//////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+1. Install node.js
+2. cd into the root folder of the project
+3. run 'npm install' (sudo npm install if on mac/linux, run as admin if on
+   windows)
+4. run 'sails lift'
+5. visit http://localhost:8080 to try out the site
+
+Note: If you are experiencing Grunt build problems with SASS, run 'gem install
+sass' and if you are on windows, you will need to install Ruby from
+http://rubyinstaller.org/downloads/

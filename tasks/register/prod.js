@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 		'concat',
 		'uglify',
 		'cssmin',
-        'sass:dev',
+        'compass:dev',
         'sails-linker:prodJs',
 		'sails-linker:prodStyles',
 		'sails-linker:devTpl',

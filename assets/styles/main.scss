@@ -1,87 +1,202 @@
-/*-------------------------------------*\
-    MAIN
-\*-------------------------------------*/
+/*------------------------------------*\
+    #ISPCU
+\*------------------------------------*/
 
 /**
- * Main.scss
- * 
- * This is the root style file, where everything
- * else stems from.
+ * CONTENTS
  *
- **
- * Contents         - You are here
- * 
- * Imports          - All the file imports
- *  - utilities
- *  - quarks
- *  - atoms
- *  - molecules
- *  - pages
- *  - shame
- * 
- * 
- */ 
- 
+ * SETTINGS
+ * Default..............inuitcss’ default settings.
+ * Global...............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ * Responsive...........Set up and name our breakpoints.
+ *
+ * TOOLS
+ * Functions............inuitcss’ default functions.
+ * Mixins...............inuitcss’ default mixins.
+ * Mixins...............Our extension of inuitcss’ mixins.
+ * Responsive...........Responsive tooling (requires responsive settings).
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ * Box-sizing...........Better default `box-sizing`.
+ * Shared...............Sensibly and tersely share global commonalities.
+ *
+ * BASE
+ * Page.................Page-level styles (HTML element).
+ * Page.................Our extension of the inuitcss page module.
+ * Headings.............Heading styles
+ * Type.................Misc type styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ * Quotes...............Styling for blockquotes, etc.
+ *
+ * OBJECTS
+ * Wrappers.............Wrappers and page constraints.
+ * Layout...............inuitcss’ layout tool.
+ * Box..................inuitcss’ box object.
+ * Media................The media object.
+ * Flag.................The flag object.
+ * UI list..............inuitcss’ UI list.
+ *
+ * COMPONENTS
+ * Page-head............Page header styles.
+ * Bands................Full-width page bands.
+ * Promo................Lead promo blocks on the home page.
+ * Page-foot............Page footer styles.
+ * Page-micro...........Page copyright styles.
+ * Site-nav.............Site’s main nav area.
+ * Buttons..............Extension of inuitcss’ buttons.
+ * Boxes................Extension of inuitcss’ box object
+ * Post.................Post-specific styles.
+ * Pull-quote...........Large, featured quotes.
+ * Carousel.............Pure CSS carousel component.
+ * Iconic...............Iconic icon styles.
+ * Sprites..............Image sprite styles.
+ * Feature list.........Big blocky lists of feature items.
+ * Annotate.............Pure CSS figure annotations.
+ * Ads..................AdPacks overrides.
+ *
+ * TRUMPS
+ * Clearfix.............I can’t believe we still need this in 2014.
+ * Widths...............Simple width helper classes.
+ * Widths-responsive....Polyfill for responsive width classes.
+ * Spacing..............Micro-level spacing.
+ * Show/hide............Helpers to show and side stuff.
+ */
 
-/*-------------------------------------*\
-    Imports
-\*-------------------------------------*/
 
 
 
-//This line isn't needed when using Grunt (which is what sails does)
-//@import 'compass';
-//
-//Core variables and mixins
-@import 'scss/variables';
-@import 'scss/mixins';
 
-// Reset and dependencies
-@import 'scss/normalize';
-@import 'scss/print';
-@import 'scss/glyphicons';
+/**
+ * #SETTINGS
+ */
+@import "bower_components/inuit-defaults/settings.defaults";
+@import "quarks/settings.global";
+@import "quarks/settings.colors";
+@import "bower_components/inuit-responsive-settings/settings.responsive";
 
-// Core CSS
-@import 'scss/scaffolding';
-@import 'scss/type';
-@import 'scss/code';
-@import 'scss/grid';
-@import 'scss/tables';
-@import 'scss/forms';
-@import 'scss/buttons';
 
-// Components
-@import 'scss/component-animations';
-@import 'scss/dropdowns';
-@import 'scss/button-groups';
-@import 'scss/input-groups';
-@import 'scss/navs';
-@import 'scss/navbar';
-@import 'scss/breadcrumbs';
-@import 'scss/pagination';
-@import 'scss/pager';
-@import 'scss/labels';
-@import 'scss/badges';
-@import 'scss/jumbotron';
-@import 'scss/thumbnails';
-@import 'scss/alerts';
-@import 'scss/progress-bars';
-@import 'scss/media';
-@import 'scss/list-group';
-@import 'scss/panels';
-@import 'scss/responsive-embed';
-@import 'scss/wells';
-@import 'scss/close';
 
-// Components w/ JavaScript
-@import 'scss/modals';
-@import 'scss/tooltip';
-@import 'scss/popovers';
-@import 'scss/carousel';
 
-// Utility classes
-@import 'scss/utilities';
-@import 'scss/responsive-utilities';
 
-// General Style (this needs to be merged into the actual Bootstrap changes)
-@import 'ispcu';
+/**
+ * #TOOLS
+ */
+@import "bower_components/inuit-functions/tools.functions";
+@import "bower_components/inuit-mixins/tools.mixins";
+@import "utilities/tools.mixins";
+@import "bower_components/inuit-responsive-tools/tools.responsive";
+@import "utilities/tools.aliases";
+
+
+
+
+
+/**
+ * #GENERIC
+ */
+@import "bower_components/inuit-normalize/generic.normalize";
+@import "bower_components/inuit-reset/generic.reset";
+@import "bower_components/inuit-box-sizing/generic.box-sizing";
+@import "bower_components/inuit-shared/generic.shared";
+
+
+
+
+
+/**
+ * #BASE
+ */
+@import "bower_components/inuit-page/base.page";
+@import "quarks/base.page";
+@import "bower_components/inuit-headings/base.headings";
+@import "quarks/base.type";
+@import "quarks/base.links";
+@import "bower_components/inuit-lists/base.lists";
+@import "bower_components/inuit-images/base.images";
+//@import "quarks/base.quotes";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+@import "quarks/objects.wrappers";
+
+$inuit-enable-layout--middle:   true;
+$inuit-enable-layout--center:   true;
+$inuit-enable-layout--bottom:   false;
+$inuit-enable-layout--large:    false;
+@import "bower_components/inuit-layout/objects.layout";
+
+@import "bower_components/inuit-box/objects.box";
+//@import "bower_components/inuit-media/objects.media";
+
+$inuit-enable-flag--rev:        true;
+$inuit-enable-flag--responsive: true;
+$inuit-flag-collapse-at:        479px !default;
+//@import "bower_components/inuit-flag/objects.flag";
+
+/**
+ * Kinda hacky for now, but needs more testing before rolling back into main
+ * flag object.
+ */
+.flag__img {
+    white-space: nowrap;
+}
+
+$inuit-list-ui-border-color:    $color-gray-ui;
+$inuit-enable-list-ui--small:   true;
+//@import "bower_components/inuit-list-ui/objects.list-ui";
+
+
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "atoms/components.page-head";
+@import "atoms/components.bands";
+//@import "atoms/components.promo";
+@import "atoms/components.page-foot";
+@import "atoms/components.page-micro";
+@import "atoms/components.site-nav";
+@import "atoms/components.buttons";
+@import "atoms/components.boxes";
+@import "atoms/components.forms";
+//@import "atoms/components.post";
+//@import "atoms/components.pull-quote";
+//@import "atoms/components.carousel";
+//@import "atoms/components.iconic";
+//@import "atoms/components.sprites";
+//@import "atoms/components.feature-list";
+//@import "atoms/components.annotate";
+//@import "atoms/components.ads";
+
+
+
+
+
+/**
+ * #TRUMPS
+ */
+@import "bower_components/inuit-clearfix/trumps.clearfix";
+
+$inuit-use-fractions:   false;
+@import "bower_components/inuit-widths/trumps.widths";
+@import "utilities/trumps.widths-responsive";
+
+$inuit-enable-margins:          true;
+$inuit-enable-margins--none:    true;
+@import "bower_components/inuit-spacing/trumps.spacing";
+@import "utilities/trumps.show-hide";

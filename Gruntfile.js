@@ -13,30 +13,6 @@
  */
 
 module.exports = function(grunt) {
-
-    grunt.initConfig({
-        sass: {
-            dev: {
-                options: {
-                    style: 'expanded' //Set your prefered style for development here.
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'assets/styles/',
-                    src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-                    dest: '.tmp/public/styles/',
-                    ext: '.css'
-                }, {
-                    expand: true,
-                    cwd: 'assets/linker/styles/',
-                    src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-                    dest: '.tmp/public/linker/styles/',
-                    ext: '.css'
-                }
-                ]
-            }
-        }
-    })
 	// Load the include-all library in order to require all of our grunt
 	// configurations and task registrations dynamically.
 	var includeAll;
@@ -97,7 +73,6 @@ module.exports = function(grunt) {
 	}
 
 	// Run task functions to configure Grunt.
-    grunt.loadTasks('node_modules/grunt-contrib-sass/tasks');
 	invokeConfigFn(taskConfigurations);
 	invokeConfigFn(registerDefinitions);
 

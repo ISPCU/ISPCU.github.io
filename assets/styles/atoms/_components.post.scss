@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #POST
+\*------------------------------------*/
+
+.post {
+}
+
+    .post__date {
+        display: block;
+        color: $color-gray-light;
+        margin-bottom: 0;
+    }
+
+    .post__title {
+        margin-bottom: 0;
+
+        > a {
+            @include font-weight(regular);
+        }
+
+    }

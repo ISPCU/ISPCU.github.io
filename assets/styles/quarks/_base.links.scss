@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: $color-links;
+
+    @include attention() {
+        text-decoration: underline;
+    }
+
+}
+
+//.link-quiet {
+//    color: $color-gray-light;
+//    text-decoration: underline;
+//
+//    @include attention() {
+//        color: $color-links;
+//    }
+//
+//}
+
+.link-secret {
+    color: inherit;
+    @include font-weight(regular);
+
+    @include attention() {
+        color: $color-links;
+        text-decoration: none;
+    }
+
+}

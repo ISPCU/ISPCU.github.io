@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,31 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+    /*
+     * Routes for the backend db methods
+     * */
+
+    //'get /member': 'MemberController.get', //Going to hide until authenticating is figured out --*probably some admin panel we make
+    'post /member': 'MemberController.post',
+    //'get /volunteer': 'VolunteerController.get', //Probably won't need this yet
+    'post /volunteer': 'VolunteerController.post',
+
+    /*
+     * Routes for the other pages
+     * */
+
+    '/about': {
+        view: 'aboutpage'
+    },
+    '/organization': {
+      view: 'organizationpage'
+    },
+    '/volunteers': {
+       view: 'volunteerpage'
+    },
+    '/members': {
+       view: 'memberspage'
+    }
 
 };
