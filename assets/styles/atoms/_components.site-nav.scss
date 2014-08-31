@@ -1,0 +1,409 @@
+/*------------------------------------*\
+    #SITE-NAV
+\*------------------------------------*/
+
+// Internal variables.
+$logo-height:   64px;
+
+.site-nav {
+overflow:hidden;
+background: $color-blue;
+border:0 none;
+height: 100px;
+z-index:1000;
+border-style: solid;
+border-width: 0px 0px 1px;
+border-color: rgba(0,0,0,0.3);
+    @extend %clearfix;
+    @include font-size(12px);
+
+    @include media-query(lap-and-up) {
+        @include font-size(16px);
+    }
+    
+    .wrapper {
+    padding: 0px }
+
+    /**
+     * If the site nav exists in a masthead, we absolutely position it. We have
+     * to do this because the masthead has a fixed height, partially governed by
+     * a faux-fluid-height technique which utilises a zeroed `height` and a
+     * large `padding-top` value, ergo, we *have* to take the nav out of flow.
+     */
+    .page-head--masthead & {
+        position: absolute;
+        top:   0;
+        right: $spacing-unit--small;
+        left:  $spacing-unit--small;
+
+        @include media-query(lap-and-up) {
+            top:   0;
+            right: $spacing-unit;
+            left:  $spacing-unit;
+        }
+
+    }
+
+}
+
+.site-nav--fixed--top {
+position:fixed;
+top: 0px;
+left:0px;
+right: 0px;
+margin-top: 0px;
+padding-top:0px;
+border-radius:0px;
+
+
+}
+
+    .site-nav__home {
+        display: block;
+        float: left;
+         z-index:99;
+    }
+                .site-nav__logo {
+            display: block;
+            height: 100px;
+           
+background: #6ea4cf;
+float: left;
+width: 215px;
+box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+
+	h1 {
+	font-family: Times;
+font-size: 56px;
+font-weight: normal;
+line-height: 100px;
+text-shadow: 0px 0px 1px rgba(255,255,255,1); 
+	}
+	
+        }
+        
+        .site-nav__sub-logo {
+        display: none; }
+        @media screen and (min-width: 1075px) {
+        
+        
+        .site-nav__sub-logo {
+        display:block;
+        height: 100px;
+float: left;
+padding-left: 30px;
+
+h3 {
+font-size: 14px;
+letter-spacing: 10px;
+line-height: 105px;
+font-weight: 700; 
+}
+        
+        }
+}
+            .site-nav__logo-fill {
+                fill: $color-brand;
+
+                .page-head--masthead & {
+                    fill: $color-page-head;
+                }
+
+            }
+
+    /**
+     * On smaller viewports, the nav is a 2x2 grid of links that lies perfectly
+     * fluch with the top and bottom of the home link. On larger viewports, the
+     * nav becomes a single row of links vertically centred to the logo, but
+     * way over to the right.
+     */
+    .site-nav__list {
+        margin:  0;
+        padding: 25px 0px 25px 0px;
+        list-style: none;
+        overflow: hidden;
+
+        @include media-query(lap-and-up) {
+            float: right;
+            overflow: visible;
+        }
+
+    }
+
+        .site-nav__item {
+            float: left;
+            width: 50%;
+            font-family: 'Oswald', sans-serif;
+font-weight: normal;
+font-size: 20px;
+border-right: 2px solid #6ea4cf;
+
+            @include media-query(lap-and-up) {
+                width: auto;
+
+                &:last-child a {
+                    
+                }
+
+            }
+
+        }
+
+            .site-nav__link {
+                display: block;
+                padding: 15px;
+                line-height: 20px;
+                color: $color-site-nav;
+
+                @include attention() {
+                    text-decoration: none;
+                    color: $color-links;
+                }
+
+                @include media-query(lap-and-up) {
+                    
+                }
+
+                .page-head--masthead & {
+
+                    @include attention(self) {
+                        color: $color-masthead;
+                    }
+
+                    @include attention() {
+                        text-decoration: underline;
+                    }
+
+                }
+
+            }
+
+            
+            /**
+ * The current state for the nav (in large-screen view) is a notched
+ * out triangle lying toward the bottom of the page head. We apply
+ * this styling to a silent class which we then extend out of the
+ * loop below.
+ */
+.page--about .site-nav__about, .page--organization .site-nav__organization, .page--volunteer .site-nav__volunteer, .page--members .site-nav__members {
+  color: #f43059; }
+  @media screen and (min-width: 720px) {
+    .page--about .site-nav__about, .page--organization .site-nav__organization, .page--volunteer .site-nav__volunteer, .page--members .site-nav__members {
+      position: relative; }
+      .page--about .site-nav__about:before, .page--organization .site-nav__organization:before, .page--volunteer .site-nav__volunteer:before, .page--members .site-nav__members:before, .page--about .site-nav__about:after, .page--organization .site-nav__organization:after, .page--volunteer .site-nav__volunteer:after, .page--members .site-nav__members:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        pointer-events: none;
+        border-style: solid;
+        border-color: transparent; }
+      .page--about .site-nav__about:before, .page--organization .site-nav__organization:before, .page--volunteer .site-nav__volunteer:before, .page--members .site-nav__members:before {
+        border-width: 12px;
+        border-bottom-color: #f2f2f2;
+        margin-left: -12px;
+        bottom: -24px; }
+      .page--about .site-nav__about:after, .page--organization .site-nav__organization:after, .page--volunteer .site-nav__volunteer:after, .page--members .site-nav__members:after {
+        border-width: 11px;
+        border-bottom-color: #f9f9f9;
+        margin-left: -11px;
+        bottom: -25px; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                
+// Dropdown menu credit : http://codepen.io/pedronauck/pen/jaluz
+//	Mixins and Variables
+// 
+
+$orange: #C0392B;
+$blue: #2980B9;
+$gray: #EEE;
+
+@mixin ul-nostyle {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+
+@mixin hover-style($color) {
+	&:hover {
+		background: lighten($color, 3%);
+	}
+}
+
+@mixin animation($content) {
+  animation: $content;
+  -moz-animation: $content;
+  -webkit-animation: $content;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+}
+
+
+
+
+
+
+
+.dropdown > input {
+display: none; }
+.dropdown > a {
+display: none; }
+.dropdown {
+
+
+
+.dropdown-menu {
+margin-left: 0px;
+list-style:none; }
+
+
+}
+@include media-query(palm) {
+
+.site-nav {
+overflow:visible }
+
+.site-nav__item {
+
+float: left;
+width: 100%;
+font-family: 'Oswald', sans-serif;
+font-weight: normal;
+font-size: 20px;
+border-bottom: 1px solid rgba(0,0,0,0.2);
+border-right-width: 0px; }
+
+.site-nav__home {
+
+position:absolute;
+top:0px;
+left:0px; }
+// =============================================================================
+//	Classes
+// =============================================================================
+
+.title {
+  font-family: 'Lato';
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.dropdown {
+background: $color-blue;
+  padding-top: 0px;
+padding-bottom: 0px;
+position:absolute;
+top:0px;
+right:0px;
+left:0px; 
+  
+	a { text-decoration: none; }
+
+	[data-toggle="dropdown"] {
+		display: block;
+color: white;
+
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+font-size: 26px;
+text-align: right;
+padding-right: 40px;
+height: 100px;
+line-height: 100px;
+    
+    &:before {
+			position: absolute;
+			display: block;
+      content: '\25BC';
+			font-size: 0.7em;
+			color: #fff;
+			top: 0px;
+			right: 10px;
+			transform:rotate(0deg);
+			transition:transform .6s;
+		}
+	}
+
+	& > .dropdown-menu {
+	background: $color-dark-blue;
+		max-height: 0;
+		overflow: hidden;
+		@include ul-nostyle;
+		transform-origin:50%, 0%;
+		transition:max-height 0.3s ease-in-out;
+
+		
+
+		li {
+			padding: 0;
+
+			a {
+				display: block;
+color: #fff;
+/* background: #eeeeee; */
+/* text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3); */
+padding: 20px 15px;
+font-weight: 300;
+letter-spacing: 2px;
+			}
+		}
+	}
+  
+  & > input[type="checkbox"] {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    left: 215px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 5;
+    
+    &:checked ~ .dropdown-menu {
+      max-height: 250px;
+			display: block;
+			z-index: 50;
+			position: relative;
+			
+			transition:max-height 0.3s ease-in-out;
+    }
+    
+    &:checked + a[data-toggle="dropdown"] {
+      &:before {
+        transform:rotate(-180deg);
+        transition:transform .3s;
+      }
+    }
+  }
+}
+
+
+}

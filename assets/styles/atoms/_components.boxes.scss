@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #BOXES
+\*------------------------------------*/
+
+.box {
+    border-radius: $base-round
+}
+
+.box--highlight {
+    background-color: $color-box-highlight-background;
+    border-bottom: 1px solid $color-box-highlight-border;
+}
+
+.box--tint {
+    background-color: $color-box-tint-background;
+}
+
+.box--dark-blue {
+	background-color: $color-dark-blue;
+}

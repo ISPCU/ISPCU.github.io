@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    #BANDS
+\*------------------------------------*/
+
+.band {
+    padding-top:    $spacing-unit;
+    padding-bottom: $spacing-unit;
+
+    @include media-query(desk) {
+        padding-top:    $spacing-unit--large;
+        padding-bottom: $spacing-unit--large;
+    }
+
+}
+
+.band--large {
+    padding: $spacing-unit--large;
+}
+
+.band--highlight {
+    background-color: $color-band-highlight-background;
+}
+
+.band--tint {
+    background-color: $color-band-tint-background;
+}
+
+.band--gray {
+    background-color: $color-band-gray-background;
+    
+    a,p,h1,h2,h3,h4,h5,h6 {
+    color: $color-white; }
+    
+    p {
+    font-size: 18px;
+    font-weight: 400; }
+}
+.band--white {
+    background-color: $color-white;
+   border-style: solid;
+border-width: 1px 0px 0px 0px;
+border-color: rgba(0,0,0,0.1);
+}
+
+.band--blue {
+    background-color: $color-blue;
+}

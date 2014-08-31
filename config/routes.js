@@ -36,11 +36,6 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'get /member': 'MemberController.get',
-  'post /member': 'MemberController.post',
-  'get /volunteer': 'VolunteerController.get',
-  'post /volunteer': 'VolunteerController.post'
-
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -50,5 +45,31 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+
+    /*
+     * Routes for the backend db methods
+     * */
+
+    'get /member': 'MemberController.get',
+    'post /member': 'MemberController.post',
+    'get /volunteer': 'VolunteerController.get',
+    'post /volunteer': 'VolunteerController.post',
+
+    /*
+     * Routes for the other pages
+     * */
+
+    '/about': {
+        view: 'aboutpage'
+    },
+    '/organization': {
+      view: 'organizationpage'
+    },
+    '/volunteer': {
+       view: 'volunteerpage'
+    },
+    '/members': {
+       view: 'memberspage'
+    }
 
 };

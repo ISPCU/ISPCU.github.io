@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    #FEATURE-LIST
+\*------------------------------------*/
+
+/**
+ * The feature list component houses large, showcase-style blocks of content. It
+ * is currently used on the Case Studies page.
+ */
+
+.feature-list {
+    @extend %clearfix;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    /**
+     * 1. Three columns on wide enough devices.
+     * 2. This crazy stuff ensures that the list has no orhpans. Thanks to
+     *    Heydon Pickering for this:
+     *    http://www.heydonworks.com/article/tetris-the-power-of-css
+     */
+    .feature-list__item {
+
+        @include media-query(lap-and-up) {
+            float: left;
+            width: 33.333333333%; /* [1] */
+
+            &:nth-child(3n+1):last-child { /* [2] */
+                width: 100%;
+            }
+
+            &:nth-child(3n+1):nth-last-child(2),
+            &:nth-child(3n+1):nth-last-child(2) + & { /* [2] */
+                width: 50%;
+            }
+
+        }
+
+    }
+
+        /**
+         * 1. Faux fluid height in 16:9 ratio.
+         * 2. Space items apart by two pixels…
+         * 3. …except the first row and first column.
+         */
+        .feature-list__link {
+            position: relative;
+            display: block;
+            background-color: $color-links;
+            padding-top: 56.25%; /* [1] */
+            margin-top: 2px; /* [2] */
+            border-radius: $base-round;
+            overflow: hidden;
+
+            /**
+             * Add a notch to the inner left side of the links to imply motion
+             * forward.
+             */
+            &:after {
+                content: "";
+                position: absolute;
+                top:  50%;
+                left: -4px;
+                margin-top: halve(-$spacing-unit);
+                border: halve($spacing-unit) solid transparent;
+                border-left-color: $inuit-base-background-color;
+                @include vendor(transition, left 0.2s);
+            }
+
+            @include attention() {
+
+                &:after {
+                    left: 0;
+                }
+
+            }
+
+            @include media-query(lap-and-up) {
+                margin-left: 2px; /* [2] */
+
+                .feature-list__item:nth-of-type(-n+3) > & {
+                    margin-top: 0; /* [3] */
+                }
+
+                .feature-list__item:nth-of-type(3n+1) > & {
+                    margin-left: 0; /* [3] */
+                }
+
+            }
+
+        }
+
+            /**
+             * Sit link text over the top of the list item.
+             *
+             * 1. Center the text-box vertically in the list item.
+             * 2. Optically sit the text itself centrally in the list item.
+             */
+            .feature-list__title {
+                @include font-size($spacing-unit);
+                @include font-weight(bold);
+                text-align: center;
+                position: absolute;
+                top: 50%; /* [1] */
+                right: 0;
+                left:  0;
+                margin-top: -$spacing-unit; /* [2] */
+                color: #fff;
+            }
+
+                .feature-list__sub {
+                    display: block;
+                    @include font-size(12px);
+                }

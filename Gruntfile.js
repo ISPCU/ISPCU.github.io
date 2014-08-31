@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    style: 'expanded' //Set your prefered style for development here.
+                    style: 'compressed' //Set your prefered style for development here.
                 },
                 files: [{
                     expand: true,

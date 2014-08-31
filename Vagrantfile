@@ -4,6 +4,14 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
+# Make sure omnibus and hostmanager are installed, it won't work without them
+unless Vagrant.has_plugin?("vagrant-hostmanager")
+  raise 'vagrant-hostmanager is not installed! run "vagrant plugin install vagrant-hostmanager" to install.'
+end
+unless Vagrant.has_plugin?("vagrant-omnibus")
+  raise 'vagrant-omnibus is not installed! run "vagrant plugin install vagrant-omnibus" to install.'
+end
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
