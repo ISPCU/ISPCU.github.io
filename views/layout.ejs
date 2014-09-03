@@ -31,5 +31,23 @@
   <%-body%>
   <%- partial ('partials/ui/footer.ejs') %>
   <%- partial ('partials/angular/angular_scripts.ejs') %>
+  <%- partial ('partials/classie/classie_scripts.ejs') %>
+  <script>
+    function init() {
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 300,
+            nav = document.querySelector(".site-nav");
+        if (distanceY > shrinkOn) {
+            classie.add(nav,"site-nav--smaller");
+        } else {
+            if (classie.has(nav,"site-nav--smaller")) {
+                classie.remove(nav,"site-nav--smaller");
+            }
+        }
+    });
+}
+window.onload = init();
+</script>
 </body>
 </html>
