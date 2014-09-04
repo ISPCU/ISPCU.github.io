@@ -65,22 +65,28 @@ $header-max-height:     480px;
  *    as the masthead moves from fluid to fixed. This actual value takes into
  *    account the padding and the top border on the header itself.
  */
-.page-head--masthead {
+ 
+.page-head--masthead, .page-head--masthead--no-bg {
     margin-bottom: 0;
     position: relative;
 	padding-top: 100px;
 padding-bottom: 100px;
-    background: url("../images/intro-bg.jpg") no-repeat center center;
-    @include vendor(background-size, cover);
     color: $color-masthead; /* [1] */
     border-top-color: $color-masthead;
     border-bottom-width: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
-    
     @include media-query(palm) {
         padding-top: 50px;
 padding-bottom: 50px;
     }
+
+}
+
+ 
+.page-head--masthead {
+    background: url("../images/intro-bg.jpg") no-repeat center center;
+    @include vendor(background-size, cover);
+
 
     @include media-query(lap-and-up) {
         background-image: url("../images/intro-bg.jpg");
@@ -95,7 +101,7 @@ padding-bottom: 50px;
 
 
     }
-
+    
 
 .page-head__liner {
 background-color:$color-blue;

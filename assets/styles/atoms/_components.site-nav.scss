@@ -9,7 +9,7 @@ $logo-height:   64px;
 overflow:hidden;
 background: $color-blue;
 border:0 none;
-max-height: 100px;
+max-height: 101px;
 height: 100%;
 z-index:1000;
 border-style: solid;
@@ -133,7 +133,7 @@ font-weight: 700;
      */
     .site-nav__list {
         margin:  0;
-        padding: 25px 0px 25px 0px;
+        padding: 0px;
         list-style: none;
         overflow: hidden;
         -webkit-transition: all 0.3s;
@@ -148,9 +148,9 @@ font-weight: 700;
     }
 
         .site-nav__item {
-        line-height: 50px;
+        line-height: 100px;
         height: 100%;
-max-height: 50px;
+max-height: 100px;
 -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -160,6 +160,10 @@ max-height: 50px;
 font-weight: normal;
 font-size: 20px;
 border-right: 2px solid #6ea4cf;
+
+&:first-child {
+border-left: 2px solid #6ea4cf;
+}
 
             @include media-query(lap-and-up) {
                 width: auto;
@@ -176,10 +180,12 @@ border-right: 2px solid #6ea4cf;
                 display: block;
                 padding: 0px 15px;
                 color: $color-site-nav;
-
+-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
                 @include attention() {
                     text-decoration: none;
-                    color: $color-links;
+                    background: $color-dark-blue;
                 }
 
                 @include media-query(lap-and-up) {
@@ -236,7 +242,7 @@ border-right: 2px solid #6ea4cf;
 
 
 nav.site-nav--smaller {
-max-height: 65px;
+max-height: 66px;
 line-height: 65px;
 
 .site-nav__home {
@@ -349,14 +355,20 @@ list-style:none; }
 overflow:visible }
 
 .site-nav__item {
-
+line-height: 50px;
+max-height: 50px;
 float: left;
 width: 100%;
 font-family: 'Oswald', sans-serif;
 font-weight: normal;
 font-size: 20px;
 border-bottom: 1px solid rgba(0,0,0,0.2);
-border-right-width: 0px; }
+border-right-width: 0px;
+
+&:first-child {
+border-left-width: 0px;
+}
+ }
 
 .site-nav__home {
 
