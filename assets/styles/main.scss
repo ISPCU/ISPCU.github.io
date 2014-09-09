@@ -37,6 +37,7 @@
  * OBJECTS
  * Wrappers.............Wrappers and page constraints.
  * Layout...............inuitcss’ layout tool.
+ * Tables...............inuitcss’ tables.
  * Box..................inuitcss’ box object.
  * Media................The media object.
  * Flag.................The flag object.
@@ -131,11 +132,23 @@
  */
 @import "quarks/objects.wrappers";
 
+$inuit-enable-layout--flush:    true;
 $inuit-enable-layout--middle:   true;
 $inuit-enable-layout--center:   true;
 $inuit-enable-layout--bottom:   false;
 $inuit-enable-layout--large:    false;
 @import "bower_components/inuit-layout/objects.layout";
+
+
+$inuit-table-border-color:      #ddd;
+$inuit-enable-table--fixed:     true;
+$inuit-enable-table--compact:   true;
+$inuit-enable-table--cosy:      true;
+$inuit-enable-table--comfy:     true;
+$inuit-enable-table--cells:     true;
+$inuit-enable-table--rows:      true;
+$inuit-enable-table--columns:   true;
+@import "bower_components/inuit-tables/objects.tables";
 
 @import "bower_components/inuit-box/objects.box";
 //@import "bower_components/inuit-media/objects.media";
@@ -175,11 +188,13 @@ $inuit-enable-list-ui--small:   true;
 @import "atoms/components.buttons";
 @import "atoms/components.boxes";
 @import "atoms/components.forms";
+@import "atoms/components.members";
 //@import "atoms/components.post";
 //@import "atoms/components.pull-quote";
 //@import "atoms/components.carousel";
 //@import "atoms/components.iconic";
 //@import "atoms/components.sprites";
+@import "atoms/components.tables";
 //@import "atoms/components.feature-list";
 //@import "atoms/components.annotate";
 //@import "atoms/components.ads";
