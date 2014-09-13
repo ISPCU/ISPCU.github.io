@@ -82,3 +82,24 @@ $expander--borders: false !default;
     }
   }
 }
+
+@if $expander--click == true {
+
+.expander--content {
+
+}
+.expander__click {
+input[type="checkbox"] {
+display: block;
+position: absolute;
+margin: 0px;
+padding: 0px;
+top: 0px;
+bottom: 0px;
+right: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+opacity: 0; }
+}
+}

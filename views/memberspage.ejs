@@ -26,19 +26,39 @@
     <div class="wrapper">
         <div class="layout">
             <div class="layout__item palm-one-whole lap-and-up-one-whole">
-                <h2 class="text-color--white" style="margin-bottom: 0px;font-weight: 500;">Want to keep you updated?</h2>
+                <h2 class="text-color--white" style="margin-bottom: 0px;font-weight: 500;">Want to be a member?</h2>
                 <h4 class="heading-sub text-color--white" style="font-size: 16px;letter-spacing: 1px;font-weight:300;">Enter your email and we'll shoot you a message whenever we have news. No spam, and we won't share it with anyone.</h4>
-                <div class="layout" ng-controller="MemberController">
-                    <form >
-                        <input type="text" ng-model="member.name" placeholder="Name">
-                        <input type="text" ng-model="member.email" placeholder="Email">
-                        <input type="text" ng-model="member.ISP" placeholder="ISP">
-                        <input type="text" ng-model="member.address" placeholder="Address">
-                        <input type="text" ng-model="member.phoneNumber" placeholder="Phone Number">
-                        <input type="text" ng-model="member.want" placeholder="Want">
-                        <button ng-click="memberFunc(member)">Member!</button>
+                <form class="layout page-micro--small" ng-controller="MemberController">
+					<div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label class="label--white">Name
+							<input type="text" ng-model="member.name" placeholder="John Smith">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label class="label--white">Email
+							<input type="text" ng-model="member.email" placeholder="john_smith@example.com">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label class="label--white">ISP
+							<input type="text" ng-model="member.ISP" placeholder="Comcast/Time Warner/Verizon/etc">
+						</label>
+					</div>
+					<div class="layout__item palm-one-whole lap-and-up-two-thirds">
+						<label class="label--white">Address
+							<input type="text" ng-model="member.address" placeholder="Street, City, State, Zipcode">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label class="label--white">Phone
+							<input type="text" ng-model="member.phoneNumber" placeholder="123-456-7890">
+						</label>
+					</div>
+					<div class="layout__item palm-one-whole lap-and-up-one-whole">
+						<label class="label--white">What you would like to see
+							<input type="text" ng-model="member.want" placeholder="Net Neutrality/More competitive prices/Better speeds/etc">
+						</label>
+					</div>
+                        <div class="layout--center page-micro--small"><div class="layout__item palm-one-whole lap-and-up-one-third"><button class="btn btn--expand btn--secondary" ng-click="memberFunc(member)">Member!</button></div></div>
+                         
                     </form>
-                </div>
             </div>
         </div>
     </div>
