@@ -1,0 +1,28 @@
+/* Thanks to Zurb's Foundation for this code */
+
+/* Label Styles */
+label {
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  /* Styles for required inputs */ }
+  label.right {
+    float: none !important;
+    text-align: right; }
+  label.inline {
+    margin: 0 0 1rem 0;
+    padding: 0.5625rem 0; }
+  label small {
+    text-transform: capitalize;
+    color: #676767; }
+    
+.label--white {
+color: #ffffff;
+small {
+color: #ffffff;
+}
+}
