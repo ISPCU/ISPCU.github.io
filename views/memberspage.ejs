@@ -53,7 +53,8 @@
 					</div>
 					<div class="layout__item palm-one-whole lap-and-up-one-whole">
 						<label class="label--white">What you would like to see
-							<input type="text" ng-model="member.want" placeholder="Net Neutrality/More competitive prices/Better speeds/etc">
+							<multi-select input-model="member.reasons" button-label="reason" item-label="reasons" tick-property="ticked">
+							</multi-select>
 						</label>
 					</div>
                         <div class="layout--center page-micro--small"><div class="layout__item palm-one-whole lap-and-up-one-third"><button class="btn btn--expand btn--secondary" ng-click="memberFunc(member)">Member!</button></div></div>
