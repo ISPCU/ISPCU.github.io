@@ -188,7 +188,17 @@ $inuit-enable-list-ui--small:   true;
 @import "atoms/components.buttons";
 @import "atoms/components.boxes";
 @import "atoms/components.forms";
+
+$expander--enabled:			true;
+$expander--hover:			true;
+$expander--click:			false !default;
+$expander--infopanel:		true;
+$expander--single:      	true;
+$expander--borders:      	true;
+
+@import "atoms/components.expander";
 @import "atoms/components.members";
+
 //@import "atoms/components.post";
 //@import "atoms/components.pull-quote";
 //@import "atoms/components.carousel";
