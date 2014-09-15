@@ -1,0 +1,63 @@
+<div class="page-micro--large band--white">
+    <div class="wrapper">
+        <div class="layout--middle">
+			<div class="layout__item palm-one-whole lap-and-up-one-whole box--light-blue" style="padding-left:30px"><h3 class="heading" style="margin-bottom:0px;">Sign Up</h3></div>
+			<div class="box--tint" style="padding: 0px 30px; border: solid 1px #ccc;border-top-width:0px;">
+			 <form class="layout page-micro--small" ng-controller="MemberController">
+				 <div class="layout__item palm-one-whole lap-and-up-one-whole">
+				 <h3 class="heading text-normal" style="color:#4d4d4d;">Basic Info</h3></div>
+					<div class="layout__item palm-one-whole lap-and-up-one-third">
+						
+						<label for="name">Name
+							<input type="text" name="name" ng-model="member.name" placeholder="John Smith">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label for="email">Email
+							<input type="email" name="email" ng-model="member.email" placeholder="john_smith@example.com">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label for="isp">ISP
+							<input type="text" name="isp" ng-model="member.ISP" placeholder="Comcast/Time Warner/Verizon/etc">
+						</label>
+					</div>
+					<div class="layout__item palm-one-whole lap-and-up-two-thirds">
+						<label for="address">Address
+							<input type="text" name="address" ng-model="member.address" placeholder="Street, City, State, Zipcode">
+						</label>
+					</div><div class="layout__item palm-one-whole lap-and-up-one-third">
+						<label for="phone">Phone
+							<input type="tel" name="phone" ng-model="member.phoneNumber" placeholder="123-456-7890">
+						</label>
+					</div>
+					<div class="layout__item palm-one-whole lap-and-up-one-whole page-micro--small" style="padding-left:24px;">
+						<h4 class="text-normal" style="color:#4d4d4d;">Why are you joining ISPCU?</h4>
+						
+						<div class="layout--middle">
+
+							<div class="layout__item palm-one-whole lap-and-up-three-fifths inline-labels">
+								
+							<label for="checkbox1"><input id="checkbox1" type="checkbox">To support Net Neutrality</label>
+							<label for="checkbox2"><input id="checkbox2" type="checkbox">Better Speed</label>
+							
+							<label for="checkbox3"><input id="checkbox3" type="checkbox">Lower Price</label>
+							<label for="checkbox4"><input id="checkbox4" type="checkbox">To have more providers to choose from</label>
+							<label for="checkbox5"><input id="checkbox5" type="checkbox">To ensure I get the service I pay for</label>
+							</div><div class="layout__item palm-one-whole lap-and-up-two-fifths">
+							
+							
+							<label>Other
+        <textarea name="other" style="height:50px;" ng-model="member.other" placeholder="Misc reason"></textarea>
+      </label>
+							
+							
+							
+							
+						</div></div>
+						</div>
+                        <div class="layout--center page-micro--small"><div class="layout__item palm-one-whole lap-and-up-one-third"><button class="btn btn--expand" ng-click="memberFunc(member)">Member!</button></div></div>
+                         
+                    </form>
+			</div>
+		</div>
+	</div>
+</div>

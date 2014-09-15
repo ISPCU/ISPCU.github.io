@@ -148,6 +148,9 @@ mark {
 .text-bold {
 font-weight: bold !important;
 }
+.text-normal {
+font-weight: normal !important;
+}
 /**
  * Text-alignment.
  */
@@ -174,3 +177,12 @@ font-weight: bold !important;
 	text-transform: capitalize; }
 .text-none {
 	text-transform: none; }
+
+
+.inline-labels {
+
+label {
+padding: 0px 10px;
+display:inline-block; }
+
+}
