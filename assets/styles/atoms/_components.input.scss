@@ -24,6 +24,7 @@ textarea {
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875rem;
+  font-weight:normal;
   margin: 0 0 1rem 0;
   padding: 0.5rem;
   height: 2.3125rem;
@@ -151,6 +152,8 @@ select {
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
+  display:block;
+  width: 100%;
   border-radius: 0;
   height: 2.3125rem; }
   select.radius {
