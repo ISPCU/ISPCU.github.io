@@ -34,6 +34,10 @@
 }
 .band--white {
     background-color: $color-white;
+}
+
+.band--white--border {
+    background-color: $color-white;
    border-style: solid;
 border-width: 1px 0px 0px 0px;
 border-color: rgba(0,0,0,0.1);
