@@ -28,7 +28,7 @@
  * A generic heading style which can be applied to any headings.
  */
 .heading {
-    @include font-size(30px);
+    font-size:30px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -93,7 +93,7 @@ pre {
 figure {
 
     @media screen and (min-width: 1380px) {
-        margin-left: -128px; /* [1] */
+        /* margin-left: -128px;  [1] */
     }
 
     > img {
@@ -145,6 +145,12 @@ mark {
 
 
 
+.text-bold {
+font-weight: bold !important;
+}
+.text-normal {
+font-weight: normal !important;
+}
 /**
  * Text-alignment.
  */
@@ -156,4 +162,27 @@ mark {
 }
 .text-right {
     text-align: right !important;
+}
+.text-shadow {
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.25);
+	
+	h1, h2, h3 ,h4, h5, h6, a, p, li, ul {
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.25); }
+}
+.text-uppercase {
+	text-transform: uppercase; }
+.text-lowercase {
+	text-transform: lowercase; }
+.text-capitalize {
+	text-transform: capitalize; }
+.text-none {
+	text-transform: none; }
+
+
+.inline-labels {
+
+label {
+padding: 0px 10px;
+display:inline-block; }
+
 }

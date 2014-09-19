@@ -121,3 +121,5 @@ nbproject
 Cheffile.lock
 cookbooks
 tmp
+assets/styles/main.css
+assets/styles/main.css.map
