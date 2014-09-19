@@ -63,8 +63,8 @@ module.exports.routes = {
     '/volunteers': {
        view: 'volunteerpage'
     },
-    '/signup': {
-       view: 'signuppage'
+    '/login_register': {
+       view: 'login_registerpage'
     }
 
 };
