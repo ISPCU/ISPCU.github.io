@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    #EXPANDER
+\*------------------------------------*/
+
+$expander-border-width: 1px !default;
+$expander-border-style: solid !default;
+$expander-border-color: #ddd !default;
+$expander-border-spacing: 2px !default;
+
+$expander--timing: 0.5s !default;
+
+$expander--enabled: false !default;
+$expander--hover: false !default;
+$expander--click: false !default;
+$expander--infopanel: false !default;
+$expander--single: false !default;
+$expander--borders: false !default;
+
+@if $expander--enabled == true {
+  .expander {
+    border-collapse: separate;
+    border-spacing: $expander-border-spacing;
+    overflow: hidden;
+    -webkit-transition: all $expander--timing;
+    -moz-transition: all $expander--timing;
+    transition: all $expander--timing;
+  }
+}
+
+@if $expander--single == true {
+  @if $expander--borders == true {
+    .expander {
+      border: $expander-border-style $expander-border-width $expander-border-color;
+    }
+    .expander--single {
+      border: $expander-border-style $expander-border-width $expander-border-color !important;
+    }
+  }
+}
+
+@if $expander--borders == true {
+  .expander-section .layout__item:first-child .expander {
+    border-left-width: $expander-border-width;
+  }
+  .expander-section .layout__item:last-child .expander {
+    border-right-color: $expander-border-color;
+  }
+}
+
+@if $expander--infopanel == true {
+  .expander--infopanel__first, .expander--infopanel__second, .expander--infopanel__third, .expander--infopanel__third span {
+    -webkit-transition: all $expander--timing;
+    -moz-transition: all $expander--timing;
+    transition: all $expander--timing;
+    display: block;
+    position: relative;
+  }
+  .expander--infopanel__first {
+    padding: 12px;
+    z-index: 99;
+    color: #fff;
+    font-weight: bold;
+  }
+  .expander--infopanel__second {
+    padding: 8px;
+    color: #222222;
+    font-weight: normal;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    @if $expander--borders == true {
+      border: solid 1px #fff;
+      border-bottom-width: 0px;
+    }
+  }
+  .expander--infopanel__third {
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    span {
+      max-height: 0px;
+      padding: 12px;
+    }
+  }
+}
+
+@if $expander--click == true {
+
+.expander--content {
+
+}
+.expander__click {
+input[type="checkbox"] {
+display: block;
+position: absolute;
+margin: 0px;
+padding: 0px;
+top: 0px;
+bottom: 0px;
+right: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+opacity: 0; }
+}
+}

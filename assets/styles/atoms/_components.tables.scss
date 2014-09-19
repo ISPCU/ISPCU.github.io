@@ -1,0 +1,36 @@
+.table--light {
+background: #FFFFFF;
+border-collapse: separate;
+border-spacing: 2px;
+border: solid 1px #ddd;
+
+tr:nth-of-type(even) {
+background: #F9F9F9;
+}
+
+thead{
+background: #F5F5F5;
+color: #222222;
+font-weight:bold;
+
+
+
+tr {
+
+th {
+color: #222222;
+font-weight:bold;
+}
+
+td {
+color: #222222;
+font-weight: normal; }
+
+}
+
+}
+
+
+}
+
+

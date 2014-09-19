@@ -25,17 +25,18 @@
     background-color: $color-band-tint-background;
 }
 
-.band--gray {
-    background-color: $color-band-gray-background;
-    
+.band--gray, .band--blue, .band--dark-blue, .band--light-blue {
     a,p,h1,h2,h3,h4,h5,h6 {
     color: $color-white; }
-    
-    p {
-    font-size: 18px;
-    font-weight: 400; }
+}
+.band--gray {
+    background-color: $color-band-gray-background;
 }
 .band--white {
+    background-color: $color-white;
+}
+
+.band--white--border {
     background-color: $color-white;
    border-style: solid;
 border-width: 1px 0px 0px 0px;
@@ -44,4 +45,12 @@ border-color: rgba(0,0,0,0.1);
 
 .band--blue {
     background-color: $color-blue;
+}
+
+.band--dark-blue {
+    background-color: $color-dark-blue;
+}
+.band--light-blue {
+    background-color: $color-light-blue;
+    
 }

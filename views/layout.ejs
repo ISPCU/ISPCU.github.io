@@ -11,6 +11,7 @@
     <title>ISPCU - ISP Consumers Union</title>
 
         <!--STYLES-->
+        <link rel="stylesheet" href="/styles/angular-multi-select.css">
         <link rel="stylesheet" href="/styles/main.css">
         <!--STYLES END-->
 
@@ -32,22 +33,8 @@
   <%- partial ('partials/ui/footer.ejs') %>
   <%- partial ('partials/angular/angular_scripts.ejs') %>
   <%- partial ('partials/classie/classie_scripts.ejs') %>
-  <script>
-    function init() {
-    window.addEventListener('scroll', function(e){
-        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
-            nav = document.querySelector(".site-nav");
-        if (distanceY > shrinkOn) {
-            classie.add(nav,"site-nav--smaller");
-        } else {
-            if (classie.has(nav,"site-nav--smaller")) {
-                classie.remove(nav,"site-nav--smaller");
-            }
-        }
-    });
-}
-window.onload = init();
-</script>
+  <%- partial ('partials/jquery/jquery_scripts.ejs') %>
+  <link rel="stylesheet" href="styles/angular-multi-select.css">
+  <script src="js/angular-multi-select.js"></script>  
 </body>
 </html>
