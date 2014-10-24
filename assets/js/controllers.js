@@ -31,11 +31,13 @@ angular.module('ISPCU.controllers', [])
             $http({method: 'POST', url: 'http://localhost:8080/member', data: data})
                 .success(function(data){
                     angular.copy(data.Member, memberData);
-                    $scope.member.name = "";
+                    $scope.member.firstname = "";
+                    $scope.member.lastname = "";
                     $scope.member.email = "";
                     $scope.member.ISP = "";
                     $scope.member.address = "";
                     $scope.member.phoneNumber = "";
+                    $scope.member.city = "";
                     $scope.member.want = "";
                     //todo displaying something to say it was a success
                 })

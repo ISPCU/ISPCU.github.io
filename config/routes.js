@@ -73,6 +73,9 @@ module.exports.routes = {
     },
     '/signup': {
        view: 'signuppage'
+    },
+    '/account': {
+       view: 'accountpage'
     }
 
 };

@@ -1,0 +1,116 @@
+<div class="page-micro--large band--white">
+   <div class="wrapper">
+      <div style="border: solid 1px #ccc;">
+         <div class="layout--center">
+               <div class="layout__item palm-one-whole lap-and-up-one-whole box--blue">
+                  <h3 class="heading" style="margin-bottom:0px;">Account</h3>
+               </div>
+         </div>
+         <div class="layout--center layout--middle">
+			<div class="layout__item palm-one-whole lap-and-up-one-whole box--tint" style=" border-left: solid 1px #ccc;padding: 20px 20px 0px;">
+				
+               <form class="layout" ng-controller="MemberController">
+                  <div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="firstname">First Name
+                     <input type="text" name="firstname" ng-model="member.firstname" >
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="lastname">Last Name
+                     <input type="text" name="lastname" ng-model="member.lastname">
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="password">Password
+                     <input type="password" name="password" ng-model="member.password">
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="confirm_password">Confirm Password
+                     <input type="password" name="confirm_password" ng-model="member.confirm_password">
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-one-whole">
+                     <label for="email">Email
+                     <input type="email" name="email" ng-model="member.email">
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-two-fifths">
+                     <label for="address">Address <small><i style="margin:3px;text-transform:none;font-weight:normal;">optional</i></small>
+                     <input type="text" name="address" ng-model="member.address">
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-two-fifths">
+                     <label for="city">City
+                     <input type="text" name="city" ng-model="member.city">
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-fifth">
+                     <label for="state">
+                        State
+                        <select name="state">
+                           <option value="AL">AL</option>
+                           <option value="AK">AK</option>
+                           <option value="AZ">AZ</option>
+                           <option value="AR">AR</option>
+                           <option value="CA">CA</option>
+                           <option value="CO">CO</option>
+                           <option value="CT">CT</option>
+                           <option value="DE">DE</option>
+                           <option value="DC">DC</option>
+                           <option value="FL">FL</option>
+                           <option value="GA">GA</option>
+                           <option value="HI">HI</option>
+                           <option value="ID">ID</option>
+                           <option value="IL">IL</option>
+                           <option value="IN">IN</option>
+                           <option value="IA">IA</option>
+                           <option value="KS">KS</option>
+                           <option value="KY">KY</option>
+                           <option value="LA">LA</option>
+                           <option value="ME">ME</option>
+                           <option value="MD">MD</option>
+                           <option value="MA">MA</option>
+                           <option value="MI">MI</option>
+                           <option value="MN">MN</option>
+                           <option value="MS">MS</option>
+                           <option value="MO">MO</option>
+                           <option value="MT">MT</option>
+                           <option value="NE">NE</option>
+                           <option value="NV">NV</option>
+                           <option value="NH">NH</option>
+                           <option value="NJ">NJ</option>
+                           <option value="NM">NM</option>
+                           <option value="NY">NY</option>
+                           <option value="NC">NC</option>
+                           <option value="ND">ND</option>
+                           <option value="OH">OH</option>
+                           <option value="OK">OK</option>
+                           <option value="OR">OR</option>
+                           <option value="PA">PA</option>
+                           <option value="RI">RI</option>
+                           <option value="SC">SC</option>
+                           <option value="SD">SD</option>
+                           <option value="TN">TN</option>
+                           <option value="TX">TX</option>
+                           <option value="UT">UT</option>
+                           <option value="VT">VT</option>
+                           <option value="VA">VA</option>
+                           <option value="WA">WA</option>
+                           <option value="WV">WV</option>
+                           <option value="WI">WI</option>
+                           <option value="WY">WY</option>
+                        </select>
+                     </label>
+                  </div>
+                  <div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="isp">ISP
+                     <input type="text" name="isp" ng-model="member.ISP">
+                     </label>
+                  </div><div class="layout__item palm-one-whole lap-and-up-one-half">
+                     <label for="phone">Phone <small><i style="margin:3px;text-transform:none;font-weight:normal;">optional</i></small>
+                     <input type="tel" name="phone" ng-model="member.phoneNumber">
+                     </label>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
