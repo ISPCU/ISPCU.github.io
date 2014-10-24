@@ -65,17 +65,18 @@ module.exports.routes = {
     '/organization': {
       view: 'organizationpage'
     },
-    '/volunteers': {
+    '/volunteer': {
        view: 'volunteerpage'
     },
     '/members': {
        view: 'memberspage'
-    },
-    '/signup': {
-       view: 'signuppage'
-    },
-    '/account': {
-       view: 'accountpage'
     }
-
+    /****
+    * '/signup': {
+    *   view: 'signuppage'
+    *},
+    *'/account': {
+    *   view: 'accountpage'
+    *}
+	*/
 };
