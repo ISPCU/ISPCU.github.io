@@ -3,7 +3,7 @@
     function init() {
         window.addEventListener('scroll', function(e) {
             var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                shrinkOn = 300,
+                shrinkOn = 50,
                 nav = document.querySelector(".site-nav");
             if (distanceY > shrinkOn) {
                 classie.add(nav, "site-nav--smaller");
