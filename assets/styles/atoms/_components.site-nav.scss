@@ -180,9 +180,9 @@ border-left: 2px solid #6ea4cf;
                 display: block;
                 padding: 0px 15px;
                 color: $color-site-nav;
--webkit-transition: all 0.1s;
-	-moz-transition: all 0.1s;
-	transition: all 0.1s;
+-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
                 @include attention() {
                     text-decoration: none;
                     background: $color-dark-blue;
@@ -272,10 +272,11 @@ padding: 0px;
 
 @include media-query(lap-and-up) {
 .dropdown-menu {
-height: 65px; 
 .site-nav__item {
-line-height: 65px;
 max-height: 65px;
+a {
+line-height: 65px;
+}
 }
 
 }
