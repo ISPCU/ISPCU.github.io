@@ -3,19 +3,23 @@
   
   <script>
 
-$('.expander--infopanel__third').each(function () {
 
-    var self = $(this),
-        span = self.find('span');
+$(".expander").mouseenter(function() {
+	var self = $(this),
+		infopanel = self.find('.expander--infopanel__third'),
+        span = infopanel.find('span');
         p	= span.find('p');
         thisheight = p.height() + 24;
 
+    infopanel.css({ "max-height": thisheight + 'px' });
     span.css({ "max-height": thisheight + 'px' });
 
-    
-    
-    
-
+}).mouseleave(function() {
+		var self = $(this),
+		infopanel = self.find('.expander--infopanel__third'),
+        span = infopanel.find('span');
+     infopanel.css({ "max-height": '0px' });
+    span.css({ "max-height": '0px' });
 })(jQuery);
 
 
