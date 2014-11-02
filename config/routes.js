@@ -62,14 +62,8 @@ module.exports.routes = {
     '/about': {
         view: 'aboutpage'
     },
-    '/organization': {
-      view: 'organizationpage'
-    },
     '/volunteer': {
        view: 'volunteerpage'
-    },
-    '/members': {
-       view: 'memberspage'
     },
     '/contact': {
        view: 'contactpage'
