@@ -70,6 +70,9 @@ module.exports.routes = {
     },
     '/members': {
        view: 'memberspage'
+    },
+    '/contact': {
+       view: 'contactpage'
     }
     /****
     * '/signup': {
