@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+
+/**
+ * Inline quotes.
+ *
+ */
+q {
+    font-style: italic;
+    quotes: "‘" "’" "“" "”";
+
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+
+}
+
+
+
+
+
+/**
+ * Block quotes.
+ *
+ * 1. Hang opening punctuation.
+ */
+blockquote {
+    text-indent: -0.41em; /* [1] */
+    quotes: "“" "”";
+
+    p {
+
+        &:before {
+            content: open-quote;
+        }
+
+        &:after {
+            content: no-close-quote;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+
+            &:after {
+                content: close-quote;
+            }
+
+        }
+
+    }
+
+    q {
+        quotes: "‘" "’";
+
+        &:before {
+            content: open-quote;
+        }
+
+        &:after {
+            content: close-quote;
+        }
+
+    }
+
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="ISPCU">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ISPCU - ISP Consumers Union</title>
+
+        <!--STYLES-->
+        <link rel="stylesheet" href="/styles/angular-multi-select.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <!--STYLES END-->
+        <style>
+        .expander--infopanel__second {
+			background: #ffffff;
+		}
+		.expander--infopanel__third {
+			background: #ffffff;
+		}
+		
+		.site-nav__logo:hover {
+			background: #7AB4E2;
+box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+		}
+nav.site-nav--smaller .site-nav__sub-logo {
+  height: 65px;
+}
+nav.site-nav--smaller .site-nav__sub-logo h3 {
+  line-height: 65px;
+}
+        </style>
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+</head>
+<body>
+  <%- partial ('partials/ui/navbar.ejs') %> 
+  <%-body%>
+  <%- partial ('partials/ui/footer.ejs') %>
+  <script src="/js/dependencies/sails.io.js"></script> 
+  <%- partial ('partials/angular/angular_scripts.ejs') %>
+  <%- partial ('partials/classie/classie_scripts.ejs') %>
+  <%- partial ('partials/jquery/jquery_scripts.ejs') %>
+  <script src="js/angular-multi-select.js"></script>  
+</body>
+</html>

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #PROMO
+\*------------------------------------*/
+
+.promo {
+    padding-bottom: 0;
+
+    @include media-query(desk) {
+        padding-bottom: $spacing-unit;
+    }
+
+}
+
+    .promo__block {
+        @extend %margin-bottom;
+    }
+
+    .promo__links {
+        text-align: center;
+
+        @include media-query(lap-and-up) {
+            word-spacing: 1.5em;
+
+            > .btn {
+                word-spacing: normal;
+            }
+
+        }
+
+    }

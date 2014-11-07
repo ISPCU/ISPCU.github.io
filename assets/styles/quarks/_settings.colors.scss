@@ -1,0 +1,137 @@
+///*------------------------------------*\
+//    #COLORS
+//\*------------------------------------*/
+
+$color-brand:       $brand-color;
+$color-blue:		#4d88b6;
+$color-dark-blue:	#477498;
+$color-light-blue:	#4d9cc6;
+$color-gray:        #444;
+$color-gray-light:  #999;
+$color-gray-ui:     #ddd;
+$color-green:       #859900;
+$color-highlight:   #fff;
+$color-tint:        #f2f2f2;
+$color-white:		#ffffff;
+$color-positive:    #3f990f;
+$color-negative:    #9f102e;
+$color-black:		#000000;
+$color-darken--10:	rgba(0,0,0,0.10);
+$color-darken--15:	rgba(0,0,0,0.15);
+$color-darken--20:	rgba(0,0,0,0.20);	
+$color-link:		#428bca;
+
+
+
+
+// Page
+$inuit-base-background-color:   #f9f9f9;
+$inuit-base-text-color:         $color-gray;
+
+
+
+
+
+// Links
+$color-links:           $color-link;
+$color-links-carousel:  $color-gray-ui;
+
+
+
+
+
+// Text
+$color-code:            $color-green;
+$color-pre-background:  $color-gray;
+$color-pre:             #fff;
+
+
+
+
+
+// Buttons
+$color-btn:     $color-links;
+
+
+
+
+
+// Iconic
+$color-iconic:  $color-gray-ui;
+
+
+
+
+
+// Page head
+$color-masthead:                #f8f8f8;
+$color-page-head-border:        $color-blue;
+$color-page-head:               #fff;
+$color-page-head-background:    #fff;
+
+
+
+
+
+// Site nav
+$color-site-nav:    $color-white;
+
+
+
+
+
+// Page foot
+$color-page-foot:               #fff;
+
+
+
+
+
+// Page micro
+$color-page-micro:              #fff;
+$color-page-micro-background:   $color-gray;
+
+
+
+
+
+// Headings
+$color-headings:    $brand-color;
+$color-heading-sub: $color-gray-light;
+
+
+
+
+
+// Quotes
+$color-quote:           $color-gray-light;
+$color-quote--banner:   $color-gray;
+
+
+
+
+
+// Boxes
+$color-box-highlight-background:    $color-highlight;
+$color-box-highlight-border:        $color-gray-ui;
+$color-box-tint-background:         $color-tint;
+
+
+
+
+
+// Bands
+$color-band-highlight-background:   $color-highlight;
+$color-band-tint-background:        $color-tint;
+$color-band-gray-background:        #393939;
+
+.text-color--white {
+color: $color-white !important; }
+.text-color--black {
+color: $color-black !important; }
+.text-color--gray {
+color: $color-gray !important; }
+.text-color--blue {
+color: $color-blue !important; }
+.text-color--dark-blue {
+color: $color-dark-blue !important; }

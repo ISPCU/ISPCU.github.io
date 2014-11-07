@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #PULL-QUOTE
+\*------------------------------------*/
+
+.pull-quote {
+    @include font-size(20px);
+    color: $color-quote;
+    padding-left: 0.5 * $spacing-unit;
+    border-left: 0.5 * $spacing-unit solid $color-tint;
+    font-style: italic;
+
+    @include media-query(lap-and-up) {
+        margin-left: -$spacing-unit;
+    }
+
+}
+
+    .pull-quote__source {
+        font-style: normal;
+    }
+
+/**
+ * Banner-style quotes, used primarily in the homepage carousel. Unfortunately
+ * we need to undo a few things that we’d already set previously.
+ */
+.pull-quote--banner {
+    max-width: 26em;
+    padding: 0 $spacing-unit--small;
+    text-indent: 0;
+    border-left: none;
+    margin: 0 auto;
+    color: $color-quote--banner;
+    font-style: normal;
+
+    @include media-query(lap-and-up) {
+        @include font-size(32px, false);
+        line-height: 1.4;
+    }
+
+}
+
+/**
+ * Pull quotes that sit within the context of their surrounding copy.
+ */
+.pull-quote--context {
+
+    @include media-query(lap-and-up) {
+        width: 50%;
+        float: left;
+        margin-right: $spacing-unit;
+    }
+
+}
+
+.pull-quote--context-alt {
+
+    @include media-query(lap-and-up) {
+        width: 50%;
+        float: right;
+        margin-left: $spacing-unit;
+    }
+
+}

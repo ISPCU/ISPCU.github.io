@@ -1,0 +1,54 @@
+.member--developer {
+  .expander--infopanel__first {
+    background: #6ea4cf;
+  }
+  &:hover {
+    .expander--infopanel__first {
+      background: #4d88b6;
+    }
+  }
+}
+
+.member--legal {
+  .expander--infopanel__first {
+    background: #4DB67B;
+  }
+  &:hover {
+    .member__title {
+      background: #409C69;
+    }
+  }
+}
+
+.member--management {
+  .expander--infopanel__first {
+    background: #CF7E6E;
+  }
+  &:hover {
+    .expander--infopanel__first {
+      background: #B36C5E;
+    }
+  }
+}
+
+@if $expander--hover == true {
+  .expander:hover {
+    @if $expander--hover == true {
+      border-right-color: #ddd;
+      border-left-width: 1px;
+    }
+    @if $expander--infopanel == true {
+      .expander--infopanel__second {
+        background: #f5f5f5;
+        padding: 12px;
+      }
+      .expander--infopanel__third {
+        span {
+          padding: 12px;
+          max-height: 150px;
+        }
+        max-height: 150px;
+      }
+    }
+  }
+}
